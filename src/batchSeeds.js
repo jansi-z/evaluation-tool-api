@@ -12,7 +12,7 @@ const user = {
   password: 'abcd1234'
 };
 
-const classes = [
+const batches = [
 
   {
     name: 'Batch #1',
@@ -44,12 +44,12 @@ feathersClient.service('users').create(user)
       password: user.password
     })
       .then(() => {
-        classes.map((batch) => {
-          feathersClient.service('classes').create(batch)
+        batches.map((batch) => {
+          feathersClient.service('batches').create(batch)
             .then((result) => {
-              console.log('Class seeded...', result.title);
+              console.log('Batch seeded...', result.title);
             }).catch((error) => {
-              console.error('Error seeding class!', error.message);
+              console.error('Error seeding batch!', error.message);
             });
         });
       })

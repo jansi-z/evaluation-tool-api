@@ -6,8 +6,8 @@ const superagent = require('superagent');
 const hooks = require('feathers-hooks');
 const auth = require('feathers-authentication-client');
 
-const batch1 = '59dc9723bcc6f67cd8f60952';
-const batch2 = '59dc9723bcc6f67cd8f60953';
+const batch1 = '59dce0b9d71ba11460d054df';
+const batch2 = '59dce0b9d71ba11460d054e0';
 
 const user = {
   name: 'Albert Einstein',
@@ -19,70 +19,70 @@ const students = [
   {
     name: 'Emma Watson',
     photo: 'https://previews.123rf.com/images/alexraths/alexraths1208/alexraths120800019/14823926-Beautiful-student-girl-with-books-Isolated-on-white-Stock-Photo.jpg',
-    classId: batch1,
+    batchId: batch1,
     evaluations: []
   },
 
   {
     name: 'Olivia Newton John',
     photo: 'https://previews.123rf.com/images/alexraths/alexraths1208/alexraths120800019/14823926-Beautiful-student-girl-with-books-Isolated-on-white-Stock-Photo.jpg',
-    classId: batch2,
+    batchId: batch2,
     evaluations: []
   },
 
   {
     name: 'Ava McLaren',
     photo: 'https://previews.123rf.com/images/alexraths/alexraths1208/alexraths120800019/14823926-Beautiful-student-girl-with-books-Isolated-on-white-Stock-Photo.jpg',
-    classId: batch1,
+    batchId: batch1,
     evaluations: []
   },
 
   {
     name: 'Isabella Caramella',
     photo: 'https://previews.123rf.com/images/alexraths/alexraths1208/alexraths120800019/14823926-Beautiful-student-girl-with-books-Isolated-on-white-Stock-Photo.jpg',
-    classId: batch2,
+    batchId: batch2,
     evaluations: []
   },
 
   {
     name: 'Sophia Loren',
     photo: 'https://previews.123rf.com/images/alexraths/alexraths1208/alexraths120800019/14823926-Beautiful-student-girl-with-books-Isolated-on-white-Stock-Photo.jpg',
-    classId: batch1,
+    batchId: batch1,
     evaluations: []
   },
 
   {
     name: 'Liam Neeson',
     photo: 'http://studentsforhigher.org/images/guy-with-books.jpg',
-    classId: batch2,
+    batchId: batch2,
     evaluations: []
   },
 
   {
     name: 'Noah Shipwright',
     photo: 'http://studentsforhigher.org/images/guy-with-books.jpg',
-    classId: batch1,
+    batchId: batch1,
     evaluations: []
   },
 
   {
     name: 'Lucas McGeorge',
     photo: 'http://studentsforhigher.org/images/guy-with-books.jpg',
-    classId: batch2,
+    batchId: batch2,
     evaluations: []
   },
 
   {
     name: 'Mason Windu',
     photo: 'http://studentsforhigher.org/images/guy-with-books.jpg',
-    classId: batch1,
+    batchId: batch1,
     evaluations: []
   },
 
   {
     name: 'Logan Lupide',
     photo: 'http://studentsforhigher.org/images/guy-with-books.jpg',
-    classId: batch2,
+    batchId: batch2,
     evaluations: []
   }
 ];
@@ -107,7 +107,7 @@ feathersClient.service('users').create(user)
             .then((result) => {
               console.log('Student seeded...', result.title);
             }).catch((error) => {
-              console.error('Error seeding classId!', error.message);
+              console.error('Error seeding student!', error.message);
             });
         });
       })

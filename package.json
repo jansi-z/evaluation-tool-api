@@ -26,7 +26,7 @@
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "start": "node src/",
     "dev": "nodemon --inspect src/",
-    "seed-classes": "node src/classSeeds.js",
+    "seed-batches": "node src/batchSeeds.js",
     "seed-students": "node src/studentSeeds.js",
     "mocha": "mocha test/ --recursive"
   },

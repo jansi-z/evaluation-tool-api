@@ -1,6 +1,6 @@
 const { authenticate } = require('feathers-authentication').hooks;
 
-const addStudentToClass = require('../../hooks/add-student-to-class');
+const addStudentToBatch = require('../../hooks/add-student-to-batch');
 
 module.exports = {
   before: {
@@ -17,9 +17,9 @@ module.exports = {
     all: [],
     find: [],
     get: [],
-    create: [addStudentToClass()],
-    update: [addStudentToClass()],
-    patch: [addStudentToClass()],
+    create: [addStudentToBatch()],
+    update: [addStudentToBatch()],
+    patch: [addStudentToBatch()],
     remove: []
   },
 
