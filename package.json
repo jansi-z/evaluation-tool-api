@@ -26,6 +26,8 @@
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "start": "node src/",
     "dev": "nodemon --inspect src/",
+    "seed-classes": "node src/classSeeds.js",
+    "seed-students": "node src/studentSeeds.js",
     "mocha": "mocha test/ --recursive"
   },
   "dependencies": {
@@ -51,9 +53,11 @@
   },
   "devDependencies": {
     "eslint": "^4.8.0",
+    "feathers-authentication-client": "^0.3.3",
     "mocha": "^4.0.1",
     "nodemon": "^1.12.1",
     "request": "^2.83.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "superagent": "^3.6.3"
   }
 }
