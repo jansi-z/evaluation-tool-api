@@ -1,5 +1,7 @@
 const { authenticate } = require('feathers-authentication').hooks;
 
+const addStudentToClass = require('../../hooks/add-student-to-class');
+
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
@@ -15,9 +17,9 @@ module.exports = {
     all: [],
     find: [],
     get: [],
-    create: [],
-    update: [],
-    patch: [],
+    create: [addStudentToClass()],
+    update: [addStudentToClass()],
+    patch: [addStudentToClass()],
     remove: []
   },
 
