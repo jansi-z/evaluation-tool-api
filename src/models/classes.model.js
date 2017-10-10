@@ -10,7 +10,7 @@ module.exports = function (app) {
     name: { type: String, required: true },
     startDate: { type: Date, required: true },
     endDate: { type: Date, required: true },
-    students: [{ type: Schema.Types.ObjectId, ref: 'students' }],
+    studentIds: [{ type: Schema.Types.ObjectId, ref: 'students' }],
 
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }

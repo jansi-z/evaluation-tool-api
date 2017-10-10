@@ -17,7 +17,7 @@ module.exports = function (app) {
 
     name: { type: String, required: true },
     photo: { type: String, required: true },
-    class: { type: Schema.Types.ObjectId, ref: 'classes' },
+    classId: { type: Schema.Types.ObjectId, ref: 'classes' },
     evaluations: [evaluationSchema],
 
     createdAt: { type: Date, default: Date.now },
