@@ -1,7 +1,7 @@
-// Use this hook to manipulate incoming or outgoing data.
-// For more information on hooks see: http://docs.feathersjs.com/api/hooks.html
 
-module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
+/*eslint-disable no-unused-vars*/
+
+module.exports = function (options = {}) {
   return function addStudentToBatch (hook) {
 
     const studentId = hook.result._id;
@@ -12,8 +12,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     else {
       return hook.app.service('batches').patch(batchId, {
         $addToSet: { studentIds: studentId }
-      }).then((result) => {
-        console.log(result);
+      }).then(() => {
         return hook;
       });
     }

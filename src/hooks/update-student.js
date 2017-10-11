@@ -1,6 +1,8 @@
 const EVALUATE = 'EVALUATE';
 
-module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
+/*eslint-disable no-unused-vars*/
+
+module.exports = function (options = {}) {
   return function updateStudent (hook) {
     return hook.app.service('students').get(hook.id)
       .then((student) => {
@@ -10,7 +12,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
         switch(type){
 
         case EVALUATE : {
-          
+
           hook.data = {
             $push: { evaluations: payload }
           };

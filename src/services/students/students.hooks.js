@@ -1,4 +1,4 @@
-const { authenticate } = require('feathers-authentication').hooks;
+// const { authenticate } = require('feathers-authentication').hooks;
 const addStudentToBatch = require('../../hooks/add-student-to-batch');
 const commonHooks = require('feathers-hooks-common');
 
@@ -24,6 +24,8 @@ const updateStudent = require('../../hooks/update-student');
 
 const studentCurrentColor = require('../../hooks/student-current-color');
 
+const fixEvaluationArrays = require('../../hooks/fix-evaluation-arrays');
+
 module.exports = {
   before: {
     all: [],
@@ -36,7 +38,11 @@ module.exports = {
   },
 
   after: {
-    all: [commonHooks.populate({schema: batchSchema}), commonHooks.populate({schema: evaluationsSchema})],
+    all: [
+      commonHooks.populate({schema: batchSchema}),
+      commonHooks.populate({schema: evaluationsSchema}),
+      fixEvaluationArrays()
+    ],
     find: [studentCurrentColor()],
     get: [studentCurrentColor()],
     create: [addStudentToBatch()],

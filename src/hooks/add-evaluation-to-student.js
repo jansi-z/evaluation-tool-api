@@ -1,7 +1,7 @@
-// Use this hook to manipulate incoming or outgoing data.
-// For more information on hooks see: http://docs.feathersjs.com/api/hooks.html
 
-module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
+/*eslint-disable no-unused-vars*/
+
+module.exports = function (options = {}) {
   return function addEvaluationToStudent (hook) {
 
     const evaluationId = hook.result._id;
@@ -12,8 +12,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     else {
       return hook.app.service('students').patch(studentId, {
         $addToSet: { evaluationIds: evaluationId }
-      }).then((result) => {
-        console.log(result);
+      }).then(() => {
         return hook;
       });
     }

@@ -1,8 +1,12 @@
-// Use this hook to manipulate incoming or outgoing data.
-// For more information on hooks see: http://docs.feathersjs.com/api/hooks.html
+
+/*eslint-disable no-unused-vars*/
 
 function returnCurrentColor(studentEvaluations){
   if(!studentEvaluations){
+    return 'red';
+  }else if (studentEvaluations.includes(undefined)) {
+    return 'red';
+  }else if (studentEvaluations.includes(null)) {
     return 'red';
   }else{
     const currentEvaluation = studentEvaluations[(studentEvaluations.length -1)];
@@ -10,7 +14,7 @@ function returnCurrentColor(studentEvaluations){
   }
 }
 
-module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
+module.exports = function (options = {}) {
   return function studentCurrentColor (hook) {
     if (hook.method === 'find'){
 
@@ -25,7 +29,5 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
 
       return hook;
     }
-
-    return Promise.resolve(hook);
   };
 };
