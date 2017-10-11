@@ -20,70 +20,70 @@ const students = [
     name: 'Emma Watson',
     photo: 'https://previews.123rf.com/images/alexraths/alexraths1208/alexraths120800019/14823926-Beautiful-student-girl-with-books-Isolated-on-white-Stock-Photo.jpg',
     batchId: batch1,
-    evaluations: []
+    evaluationIds: []
   },
 
   {
     name: 'Olivia Newton John',
     photo: 'https://previews.123rf.com/images/alexraths/alexraths1208/alexraths120800019/14823926-Beautiful-student-girl-with-books-Isolated-on-white-Stock-Photo.jpg',
     batchId: batch2,
-    evaluations: []
+    evaluationIds: []
   },
 
   {
     name: 'Ava McLaren',
     photo: 'https://previews.123rf.com/images/alexraths/alexraths1208/alexraths120800019/14823926-Beautiful-student-girl-with-books-Isolated-on-white-Stock-Photo.jpg',
     batchId: batch1,
-    evaluations: []
+    evaluationIds: []
   },
 
   {
     name: 'Isabella Caramella',
     photo: 'https://previews.123rf.com/images/alexraths/alexraths1208/alexraths120800019/14823926-Beautiful-student-girl-with-books-Isolated-on-white-Stock-Photo.jpg',
     batchId: batch2,
-    evaluations: []
+    evaluationIds: []
   },
 
   {
     name: 'Sophia Loren',
     photo: 'https://previews.123rf.com/images/alexraths/alexraths1208/alexraths120800019/14823926-Beautiful-student-girl-with-books-Isolated-on-white-Stock-Photo.jpg',
     batchId: batch1,
-    evaluations: []
+    evaluationIds: []
   },
 
   {
     name: 'Liam Neeson',
     photo: 'http://studentsforhigher.org/images/guy-with-books.jpg',
     batchId: batch2,
-    evaluations: []
+    evaluationIds: []
   },
 
   {
     name: 'Noah Shipwright',
     photo: 'http://studentsforhigher.org/images/guy-with-books.jpg',
     batchId: batch1,
-    evaluations: []
+    evaluationIds: []
   },
 
   {
     name: 'Lucas McGeorge',
     photo: 'http://studentsforhigher.org/images/guy-with-books.jpg',
     batchId: batch2,
-    evaluations: []
+    evaluationIds: []
   },
 
   {
     name: 'Mason Windu',
     photo: 'http://studentsforhigher.org/images/guy-with-books.jpg',
     batchId: batch1,
-    evaluations: []
+    evaluationIds: []
   },
 
   {
     name: 'Logan Lupide',
     photo: 'http://studentsforhigher.org/images/guy-with-books.jpg',
     batchId: batch2,
-    evaluations: []
+    evaluationIds: []
   }
 ];
 
