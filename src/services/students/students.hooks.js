@@ -11,6 +11,15 @@ const batchSchema = {
   }
 };
 
+const evaluationsSchema = {
+  include: {
+    service: 'evaluations',
+    nameAs: 'evaluations',
+    parentField: 'evaluationIds',
+    childField: '_id'
+  }
+};
+
 const updateStudent = require('../../hooks/update-student');
 
 module.exports = {
@@ -25,7 +34,7 @@ module.exports = {
   },
 
   after: {
-    all: [commonHooks.populate({schema: batchSchema})],
+    all: [commonHooks.populate({schema: batchSchema}), commonHooks.populate({schema: evaluationsSchema})],
     find: [],
     get: [],
     create: [addStudentToBatch()],
