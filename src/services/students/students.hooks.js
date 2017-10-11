@@ -22,6 +22,8 @@ const evaluationsSchema = {
 
 const updateStudent = require('../../hooks/update-student');
 
+const studentCurrentColor = require('../../hooks/student-current-color');
+
 module.exports = {
   before: {
     all: [],
@@ -35,8 +37,8 @@ module.exports = {
 
   after: {
     all: [commonHooks.populate({schema: batchSchema}), commonHooks.populate({schema: evaluationsSchema})],
-    find: [],
-    get: [],
+    find: [studentCurrentColor()],
+    get: [studentCurrentColor()],
     create: [addStudentToBatch()],
     update: [addStudentToBatch()],
     patch: [addStudentToBatch()],
