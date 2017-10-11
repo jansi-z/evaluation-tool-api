@@ -1,4 +1,14 @@
 const { authenticate } = require('feathers-authentication').hooks;
+const commonHooks = require('feathers-hooks-common');
+
+const studentsSchema = {
+  include: {
+    service: 'students',
+    nameAs: 'students',
+    parentField: 'studentIds',
+    childField: '_id'
+  }
+};
 
 module.exports = {
   before: {
@@ -12,7 +22,7 @@ module.exports = {
   },
 
   after: {
-    all: [],
+    all: [commonHooks.populate({ schema: studentsSchema })],
     find: [],
     get: [],
     create: [],
