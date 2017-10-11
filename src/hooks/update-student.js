@@ -10,7 +10,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
         switch(type){
 
         case EVALUATE : {
-
+          
           hook.data = {
             $push: { evaluations: payload }
           };

@@ -15,7 +15,7 @@ const updateStudent = require('../../hooks/update-student');
 
 module.exports = {
   before: {
-    all: [ authenticate('jwt') ],
+    all: [],
     find: [],
     get: [],
     create: [],
