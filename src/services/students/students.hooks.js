@@ -1,6 +1,15 @@
 const { authenticate } = require('feathers-authentication').hooks;
-
 const addStudentToBatch = require('../../hooks/add-student-to-batch');
+const commonHooks = require('feathers-hooks-common');
+
+const batchSchema = {
+  include: {
+    service: 'batches',
+    nameAs: 'batch',
+    parentField: 'batchId',
+    childField: '_id'
+  }
+};
 
 module.exports = {
   before: {
@@ -14,7 +23,7 @@ module.exports = {
   },
 
   after: {
-    all: [],
+    all: [commonHooks.populate({schema: batchSchema})],
     find: [],
     get: [],
     create: [addStudentToBatch()],
