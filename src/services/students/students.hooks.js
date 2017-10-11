@@ -11,14 +11,16 @@ const batchSchema = {
   }
 };
 
+const updateStudent = require('../../hooks/update-student');
+
 module.exports = {
   before: {
     all: [ authenticate('jwt') ],
     find: [],
     get: [],
     create: [],
-    update: [],
-    patch: [],
+    update: [updateStudent()],
+    patch: [updateStudent()],
     remove: []
   },
 
