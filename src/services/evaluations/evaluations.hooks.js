@@ -1,5 +1,7 @@
 
 
+const addEvaluationToStudent = require('../../hooks/add-evaluation-to-student');
+
 module.exports = {
   before: {
     all: [],
@@ -15,9 +17,9 @@ module.exports = {
     all: [],
     find: [],
     get: [],
-    create: [],
-    update: [],
-    patch: [],
+    create: [addEvaluationToStudent()],
+    update: [addEvaluationToStudent()],
+    patch: [addEvaluationToStudent()],
     remove: []
   },
 
