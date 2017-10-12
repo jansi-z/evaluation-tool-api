@@ -25,14 +25,19 @@ module.exports = function (options = {}) {
           const oldBatchId = student.batchId;
           const studentId = student._id;
 
-          return hook.app.service('batches').patch(oldBatchId, {
-            $pull: { studentIds : studentId }
-          })
-            .then(() => {
-              return hook.app.service('students').patch(studentId, payload);
-            })
-            .then(() => { return hook;});
+          if(!oldBatchId){
+            hook.data = payload;
+            return hook;
+          }else{
 
+            return hook.app.service('batches').patch(oldBatchId, {
+              $pull: { studentIds : studentId }
+            })
+              .then(() => {
+                return hook.app.service('students').patch(studentId, payload);
+              })
+              .then(() => { return hook;});
+          }
 
         }
 
