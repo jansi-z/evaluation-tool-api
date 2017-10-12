@@ -6,8 +6,8 @@ const superagent = require('superagent');
 const hooks = require('feathers-hooks');
 const auth = require('feathers-authentication-client');
 
-const batch1 = '59dce0b9d71ba11460d054df';
-const batch2 = '59dce0b9d71ba11460d054e0';
+const batch1 = '59df2027fa4b6749111cf393';
+const batch2 = '59df2027fa4b6749111cf394';
 
 const user = {
   name: 'Albert Einstein',

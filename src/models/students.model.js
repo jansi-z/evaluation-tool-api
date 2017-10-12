@@ -12,6 +12,7 @@ module.exports = function (app) {
     photo: { type: String, required: true },
     batchId: { type: Schema.Types.ObjectId, ref: 'batches' },
     evaluationIds: [{ type: Schema.Types.ObjectId, ref: 'evaluations' }],
+    currentColor: { type: String, default: 'red' },
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
   });

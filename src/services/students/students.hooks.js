@@ -43,8 +43,8 @@ module.exports = {
       commonHooks.populate({schema: evaluationsSchema}),
       fixEvaluationArrays()
     ],
-    find: [studentCurrentColor()],
-    get: [studentCurrentColor()],
+    find: [],
+    get: [],
     create: [addStudentToBatch()],
     update: [addStudentToBatch()],
     patch: [addStudentToBatch()],

@@ -4,7 +4,7 @@
 module.exports = function (options = {}) {
   return function fixEvaluationArrays (hook) {
     if (hook.method === 'find') {
-      debugger
+      
       hook.result = hook.result.map((student) => (
         Object.assign(student, {
           evaluations: student.evaluations instanceof Array ? student.evaluations : [student.evaluations]

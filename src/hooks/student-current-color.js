@@ -16,7 +16,9 @@ function returnCurrentColor(studentEvaluations){
 
 module.exports = function (options = {}) {
   return function studentCurrentColor (hook) {
-    if (hook.method === 'find'){
+    if (!hook.result.data){
+      return hook;
+    } else if (hook.method === 'find'){
 
       hook.result.data = hook.result.map((student) => (
         Object.assign(student, { currentColor: returnCurrentColor(student.evaluations) }
