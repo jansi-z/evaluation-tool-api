@@ -3,7 +3,7 @@
 
 module.exports = function (options = {}) {
   return function addStudentToBatch (hook) {
-
+    
     const studentId = hook.result._id;
     const batchId = hook.data.batchId;
 

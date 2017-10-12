@@ -2,7 +2,7 @@
 const addStudentToBatch = require('../../hooks/add-student-to-batch');
 const commonHooks = require('feathers-hooks-common');
 const updateStudent = require('../../hooks/update-student');
-const fixEvaluationArrays = require('../../hooks/fix-evaluation-arrays');
+// const fixEvaluationArrays = require('../../hooks/fix-evaluation-arrays');
 
 const batchSchema = {
   include: {
@@ -37,7 +37,7 @@ module.exports = {
     all: [
       commonHooks.populate({schema: batchSchema}),
       commonHooks.populate({schema: evaluationsSchema}),
-      fixEvaluationArrays()
+
     ],
     find: [],
     get: [],
