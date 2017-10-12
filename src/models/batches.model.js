@@ -11,6 +11,7 @@ module.exports = function (app) {
     startDate: { type: Date, required: true },
     endDate: { type: Date, required: true },
     studentIds: [{ type: Schema.Types.ObjectId, ref: 'students' }],
+    randomStudent: { type: String },
 
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
