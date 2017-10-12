@@ -15,14 +15,14 @@ const user = {
 const batches = [
 
   {
-    name: 'Batch #1',
+    number: 1,
     startDate: new Date(2017, 0, 1),
     endDate: new Date(2017, 2, 1),
     studentIds: []
   },
 
   {
-    name: 'Batch #2',
+    number: 2,
     startDate: new Date(2017, 1, 1),
     endDate: new Date(2017, 3, 1),
     studentIds: []

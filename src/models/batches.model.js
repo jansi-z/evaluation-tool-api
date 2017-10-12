@@ -7,7 +7,7 @@ module.exports = function (app) {
   const { Schema } = mongooseClient;
   const batches = new Schema({
 
-    name: { type: String, required: true },
+    number: { type: Number, required: true },
     startDate: { type: Date, required: true },
     endDate: { type: Date, required: true },
     studentIds: [{ type: Schema.Types.ObjectId, ref: 'students' }],
