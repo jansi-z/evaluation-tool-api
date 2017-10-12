@@ -10,14 +10,16 @@ const studentsSchema = {
   }
 };
 
+const updateBatch = require('../../hooks/update-batch');
+
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
     create: [],
-    update: [],
-    patch: [],
+    update: [updateBatch()],
+    patch: [updateBatch()],
     remove: []
   },
 
