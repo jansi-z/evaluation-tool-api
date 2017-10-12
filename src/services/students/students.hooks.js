@@ -1,6 +1,8 @@
 // const { authenticate } = require('feathers-authentication').hooks;
 const addStudentToBatch = require('../../hooks/add-student-to-batch');
 const commonHooks = require('feathers-hooks-common');
+const updateStudent = require('../../hooks/update-student');
+const fixEvaluationArrays = require('../../hooks/fix-evaluation-arrays');
 
 const batchSchema = {
   include: {
@@ -19,12 +21,6 @@ const evaluationsSchema = {
     childField: '_id'
   }
 };
-
-const updateStudent = require('../../hooks/update-student');
-
-const studentCurrentColor = require('../../hooks/student-current-color');
-
-const fixEvaluationArrays = require('../../hooks/fix-evaluation-arrays');
 
 module.exports = {
   before: {
