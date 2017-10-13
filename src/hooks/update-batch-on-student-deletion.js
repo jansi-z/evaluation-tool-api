@@ -3,9 +3,9 @@
 
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
   return function updateBatchOnStudentDeletion (hook) {
-
+    
     const studentId = hook.result._id;
-    const batchId = hook.data.batchId;
+    const batchId = hook.result.batchId;
 
     if(!batchId) { return hook; }
 
