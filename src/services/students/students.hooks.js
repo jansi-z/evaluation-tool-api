@@ -22,6 +22,8 @@ const evaluationsSchema = {
   }
 };
 
+const updateBatchOnStudentDeletion = require('../../hooks/update-batch-on-student-deletion');
+
 module.exports = {
   before: {
     all: [],
@@ -44,7 +46,7 @@ module.exports = {
     create: [addStudentToBatch()],
     update: [addStudentToBatch()],
     patch: [addStudentToBatch()],
-    remove: []
+    remove: [updateBatchOnStudentDeletion()]
   },
 
   error: {
