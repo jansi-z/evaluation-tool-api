@@ -11,8 +11,13 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     const user = hook.params.user;
     const evaluations = hook.result.data;
 
-    hook.result = evaluations.filter((evaluation) => { return comparableObjectId(evaluation.authorId) === comparableObjectId(user._id); });
-    console.log(hook.result)
-    return hook;
+    if(!evaluations){
+      
+      return hook;
+    }else{
+      hook.result = evaluations.filter((evaluation) => { return comparableObjectId(evaluation.authorId) === comparableObjectId(user._id); });
+
+      return hook;
+    }
   };
 };
