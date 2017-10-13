@@ -2,6 +2,8 @@
 
 const addEvaluationToStudent = require('../../hooks/add-evaluation-to-student');
 
+const filterEvaluationsByAuthor = require('../../hooks/filter-evaluations-by-author');
+
 module.exports = {
   before: {
     all: [],
@@ -15,7 +17,7 @@ module.exports = {
 
   after: {
     all: [],
-    find: [],
+    find: [filterEvaluationsByAuthor()],
     get: [],
     create: [addEvaluationToStudent()],
     update: [addEvaluationToStudent()],
