@@ -1,6 +1,6 @@
 # evaluation-tool-api
 
-> An API for the evaluation tool I made as a final project for my programming course
+An API for the evaluation tool I made as a final project for my programming course. It uses Feathers with Mongoose. It hosts four services: users, students, batches, and evaluations. Its intended for teachers (users) to track their students' performance. 
 
 ## About
 
