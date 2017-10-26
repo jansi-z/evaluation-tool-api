@@ -1,10 +1,8 @@
-# evaluation-tool-api
-
-An API for the evaluation tool I made as a final project for my programming course. It uses Feathers with Mongoose. It hosts four services: users, students, batches, and evaluations. Its intended for teachers (users) to track their students' performance. 
-
 ## About
 
-This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
+An API for the evaluation tool I made as a final project for my programming course. It uses [Feathers](http://feathersjs.com) with Mongoose. It hosts four services: users, students, batches, and evaluations. Its intended for teachers (users) to track their students' performance. The core feature is a random student selector: if at any point a teacher wants to ask a question, the app returns a (weighted) random student from the batch they are currently teaching.
+
+Working on this project taught me a lot about utilising hooks in an API. My personal challenge was to contain all business logic in the API, which means that I put the weighted random function in a hook.
 
 ## Getting Started
 
@@ -22,33 +20,6 @@ Getting up and running is as easy as 1, 2, 3.
     ```
     npm start
     ```
-
-## Testing
-
-Simply run `npm test` and all your tests in the `test/` directory will be run.
-
-## Scaffolding
-
-Feathers has a powerful command line interface. Here are a few things it can do:
-
-```
-$ npm install -g feathers-cli             # Install Feathers CLI
-
-$ feathers generate service               # Generate a new Service
-$ feathers generate hook                  # Generate a new Hook
-$ feathers generate model                 # Generate a new Model
-$ feathers help                           # Show all commands
-```
-
-## Help
-
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
-
-## Changelog
-
-__0.1.0__
-
-- Initial release
 
 ## License
 
